@@ -13,7 +13,7 @@ public class GUIManager : MonoBehaviour
     public Button reportMenuButton;
     public Button reportButton;
 
-    public Button bServer, bVillage, bDungeon, bImagen, bDesplazamiento, bDuplicado, bElectrico, bIntruso, bParanormal;
+    public Button bCocina, bDormitorio, bBaño, bImagen, bDesplazamiento, bDuplicado, bElectrico, bIntruso, bParanormal;
 
     private string selectedRoom = "";
     private string selectedAnomaly = "";
@@ -34,9 +34,9 @@ public class GUIManager : MonoBehaviour
 
     private void Start()
     {
-        bServer.onClick.AddListener(delegate () { OnRoomButtonClicked(bServer,"Server"); });
-        bVillage.onClick.AddListener(delegate () { OnRoomButtonClicked(bVillage, "Village"); });
-        bDungeon.onClick.AddListener(delegate () { OnRoomButtonClicked(bDungeon, "Dungeon"); });
+        bCocina.onClick.AddListener(delegate () { OnRoomButtonClicked(bCocina,"Cocina"); });
+        bDormitorio.onClick.AddListener(delegate () { OnRoomButtonClicked(bDormitorio, "Dormitorio"); });
+        bBaño.onClick.AddListener(delegate () { OnRoomButtonClicked(bBaño, "Baño"); });
 
         bImagen.onClick.AddListener(delegate () { OnAnomalyButtonClicked(bImagen, "Imagen"); });
         bDesplazamiento.onClick.AddListener(delegate () { OnAnomalyButtonClicked(bDesplazamiento, "Desplazamiento"); });
@@ -74,9 +74,9 @@ public class GUIManager : MonoBehaviour
         reportButton.interactable = false;
         selectedAnomaly = "";
         selectedRoom = "";
-        bServer.interactable = true;
-        bVillage.interactable = true;
-        bDungeon.interactable = true; 
+        bCocina.interactable = true;
+        bDormitorio.interactable = true;
+        bBaño.interactable = true; 
         bImagen.interactable = true; 
         bDesplazamiento.interactable = true; 
         bDuplicado.interactable = true; 
@@ -91,9 +91,9 @@ public class GUIManager : MonoBehaviour
     private void OnRoomButtonClicked(Button b, string roomName)
     {
         selectedRoom = roomName;
-        bServer.interactable = true;
-        bVillage.interactable = true;
-        bDungeon.interactable = true;
+        bCocina.interactable = true;
+        bDormitorio.interactable = true;
+        bBaño.interactable = true;
         b.interactable = false;
     }
 
@@ -111,9 +111,9 @@ public class GUIManager : MonoBehaviour
 
     public void Report()
     {
-        bServer.interactable = false;
-        bVillage.interactable = false;
-        bDungeon.interactable = false;
+        bCocina.interactable = false;
+        bDormitorio.interactable = false;
+        bBaño.interactable = false;
         bImagen.interactable = false;
         bDesplazamiento.interactable = false;
         bDuplicado.interactable = false;
