@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnomaliaImagenBaño : Anomalia
+public class AnomaliaImagenBaño : AnomaliaImagen
 {
     public Material materialToActivate, materialToRemove;
-    public override bool CheckAnomalyType(string type)
-    {
-        return type.Equals("Imagen");
-    }
 
     public override void Activate()
     {
